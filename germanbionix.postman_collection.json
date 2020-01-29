@@ -1,0 +1,130 @@
+{
+	"info": {
+		"name": "germanbionix",
+		"_postman_id": "5794a237-b48a-49f9-8902-8a43ecc4e311",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "6d",
+			"description": null,
+			"item": []
+		},
+		{
+			"name": "http://api.germanbionic.io/telemetry",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlJUUTFRalUzTTBNNU1qVkJRVGd6TjBRNFFUSTVPRUpCUmtFek9UaENOalU1UVRGRFJqUTBOZyJ9.eyJodHRwczovL2t1cmJpcy5pby9jbGFpbXMiOnsicm9sZXMiOlsiZ2IvR2VybWFuQmlvbmljcy8iXX0sIm5pY2tuYW1lIjoibXJpdHl1bmpheS5wYW5kZXkiLCJuYW1lIjoibXJpdHl1bmpheS5wYW5kZXlAYmljcy5jb20iLCJwaWN0dXJlIjoiaHR0cHM6Ly9zLmdyYXZhdGFyLmNvbS9hdmF0YXIvY2FiODIyZTM4MmMwN2IyZWU0ODMwNmRmZGNlZDUwMTY_cz00ODAmcj1wZyZkPWh0dHBzJTNBJTJGJTJGY2RuLmF1dGgwLmNvbSUyRmF2YXRhcnMlMkZtci5wbmciLCJ1cGRhdGVkX2F0IjoiMjAyMC0wMS0yOFQxMzoyODoxMS4xMzNaIiwiZW1haWwiOiJtcml0eXVuamF5LnBhbmRleUBiaWNzLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJpc3MiOiJodHRwczovL2dlcm1hbmJpb25pYy5ldS5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NWUzMDE2NDc3NGRlMTUwZTc2ZTBkOGE4IiwiYXVkIjoiWWp5TzBvSmVOTDhyRjFhcGI4VWJNVzdMTGFQRnZ2NTEiLCJpYXQiOjE1ODAyMTgwOTEsImV4cCI6MTU4MDI1NDA5MSwiYXRfaGFzaCI6InlhUG5HZjZ3MjlCZEhySnptbnhFWUEiLCJub25jZSI6Ikt6S2cuLmszZ0F2WVBhSXNoNXZGaGFiT3IuTVprcXRvIn0.QGil5B8EZfDBo3H7l8qkt9jk-f0jvxr_zpeShPFOkm2r4m6iMXVuxltXn8GxlOSjfFckvhOEMRLvX6rB2A-D6d3apzc_nXN0KjyAy5mJ29Kzr2gz3y9LUvKZVnCDgfN3lEeG2eTcsD67-3jVa55SpqbCaEum7QCvs_l0tfRLTA96EYNywkjwOmK_qZY-6jX0zo6-f9vkRvXO7HPBUKAdPKm5n2zIDDWM_OcFfoQbrKSeyOHF5-rOfWeeHTriGsrYDmisolvefFXfj7DcpwvoPPABzM9NINIeH-FIKtX1A1YBRd1u9EL_hvVjXQRA9J9LZUwBndWxeJNniT_0DyTKeA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\":\"query GetTelemetry($deviceType: String!,$DeviceID: String!,$dateRanges:DateRange!){trunk(query:{deviceType: $deviceType,DeviceID: $DeviceID,dateRanges:[$dateRanges]}){time,velocity,angle}}\",\"operationName\":\"GetTelemetry\",\"variables\":{\"DeviceID\":\"17\",\"dateRanges\":{\"dateFrom\":1580200717,\"dateTo\":1580220717},\"deviceType\":\"exoskeleton\"}\r\n}"
+				},
+				"url": {
+					"raw": "http://api.germanbionic.io/telemetry",
+					"protocol": "http",
+					"host": [
+						"api",
+						"germanbionic",
+						"io"
+					],
+					"path": [
+						"telemetry"
+					]
+				},
+				"description": "dfs"
+			},
+			"response": []
+		},
+		{
+			"name": "https://simforthings-dev.bics.com/api/api/auth/login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "Admin@123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "gupta",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://simforthings-dev.bics.com/api/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"simforthings-dev",
+						"bics",
+						"com"
+					],
+					"path": [
+						"api",
+						"api",
+						"auth",
+						"login"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://api.powerbi.com/beta/ab7771fb-2d0f-4a01-b505-d25ab069608f/datasets/241c9137-5bbb-490b-a3eb-ffe61530f25b/rows?key=8E%2Fk44M3CLbq39p2rikG%2F1DYN4h7O6aZDEfw7XAFfrX6yixSRcF8zYcsSuO5iSA1yt4aW1t1kj%2B7k%2BGPArK%2FHA%3D%3D",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"angel\" :\"AAAAA555555\",\r\n\"time\" :\"2020-01-29T19:54:38.997Z\",\r\n\"velocity\" :\"AAAAA555555\"\r\n}"
+				},
+				"url": {
+					"raw": "http://api.powerbi.com/beta/ab7771fb-2d0f-4a01-b505-d25ab069608f/datasets/241c9137-5bbb-490b-a3eb-ffe61530f25b/rows?key=8E%2Fk44M3CLbq39p2rikG%2F1DYN4h7O6aZDEfw7XAFfrX6yixSRcF8zYcsSuO5iSA1yt4aW1t1kj%2B7k%2BGPArK%2FHA%3D%3D",
+					"protocol": "http",
+					"host": [
+						"api",
+						"powerbi",
+						"com"
+					],
+					"path": [
+						"beta",
+						"ab7771fb-2d0f-4a01-b505-d25ab069608f",
+						"datasets",
+						"241c9137-5bbb-490b-a3eb-ffe61530f25b",
+						"rows"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "8E%2Fk44M3CLbq39p2rikG%2F1DYN4h7O6aZDEfw7XAFfrX6yixSRcF8zYcsSuO5iSA1yt4aW1t1kj%2B7k%2BGPArK%2FHA%3D%3D",
+							"equals": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
